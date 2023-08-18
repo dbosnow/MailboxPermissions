@@ -1,0 +1,2038 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <internal_name>mailbox_access_approval</internal_name>
+        <label_cache>[{"name":"7aba4de8-4658-492f-8805-877094031301.Record.ad_user_group","label":"1➛Shared Mailbox Record➛AD User Group","reference":"","reference_display":"AD User Group","type":"string","base_type":"string","parent_table_name":"x_snc_shared_mai_0_shared_mailbox","column_name":"ad_user_group"},{"name":"Created_1.current.opened_by.name","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Opened by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"9de60bcb-eb38-4235-b660-685f90128d7a.__action_status__.message","label":"2➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"Created_1.current.opened_by.email","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Opened by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"9de60bcb-eb38-4235-b660-685f90128d7a.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7aba4de8-4658-492f-8805-877094031301.Record.mailbox_approver","label":"1➛Shared Mailbox Record➛Mailbox Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_shared_mai_0_shared_mailbox","column_name":"mailbox_approver"},{"name":"Created_1.current.shared_mailbox.mailbox_name","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Shared Mailbox➛Mailbox Name","reference":"","reference_display":"Mailbox Name","type":"string","base_type":"string","parent_table_name":"x_snc_shared_mai_0_shared_mailbox","column_name":"mailbox_name"},{"name":"Created_1.current","label":"Trigger - Record Created➛Mailbox Permission Request Record","reference":"x_snc_shared_mai_0_mailbox_permission_request","reference_display":"Mailbox Permission Request","type":"reference","base_type":"reference","attributes":{}},{"name":"Created_1.current.shared_mailbox","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Shared Mailbox","reference":"x_snc_shared_mai_0_shared_mailbox","reference_display":"Shared Mailbox","type":"reference","base_type":"reference","parent_table_name":"x_snc_shared_mai_0_mailbox_permission_request","column_name":"shared_mailbox"}]</label_cache>
+        <master_snapshot>2f828cf1872c75106ff240cd0ebb35e4</master_snapshot>
+        <name>Mailbox Access Approval</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>d092ccf1872c75106ff240cd0ebb35c2</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:21:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>700108b1872c75106ff240cd0ebb353a</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Mailbox Access Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name>sys_hub_flow_700108b1872c75106ff240cd0ebb353a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:59</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_shared_mai_0_mailbox_permission_request">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d092ccf1872c75106ff240cd0ebb35c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:31</sys_updated_on>
+        <table>x_snc_shared_mai_0_mailbox_permission_request</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>700108b1872c75106ff240cd0ebb353a</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 16:18:58</sys_created_on>
+        <sys_id>a31e4c31876c75106ff240cd0ebb35c6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:58</sys_updated_on>
+        <trigger display_value="">d092ccf1872c75106ff240cd0ebb35c2</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=700108b1872c75106ff240cd0ebb353a^sys_idNOT INa31e4c31876c75106ff240cd0ebb35c6"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=700108b1872c75106ff240cd0ebb353a^sys_idNOT IN15820cf1872c75106ff240cd0ebb35f3"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>15820cf1872c75106ff240cd0ebb35f3</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:59</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=15820cf1872c75106ff240cd0ebb35f3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>15820cf1872c75106ff240cd0ebb35f3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>55820cf1872c75106ff240cd0ebb35f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>15820cf1872c75106ff240cd0ebb35f3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>9d820cf1872c75106ff240cd0ebb35f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=700108b1872c75106ff240cd0ebb353a^sys_idNOT IN050108b1872c75106ff240cd0ebb353c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>700108b1872c75106ff240cd0ebb353a</id>
+        <name>Mailbox Access Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:21:43</sys_created_on>
+        <sys_id>050108b1872c75106ff240cd0ebb353c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:21:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=050108b1872c75106ff240cd0ebb353c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=700108b1872c75106ff240cd0ebb353a^sys_idNOT IN81820cf1872c75106ff240cd0ebb35ea,9d820cf1872c75106ff240cd0ebb35ee"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</model>
+        <model_id>700108b1872c75106ff240cd0ebb353a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_700108b1872c75106ff240cd0ebb353a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:17</sys_created_on>
+        <sys_id>81820cf1872c75106ff240cd0ebb35ea</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</model>
+        <model_id>700108b1872c75106ff240cd0ebb353a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_700108b1872c75106ff240cd0ebb353a</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>9d820cf1872c75106ff240cd0ebb35ee</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=700108b1872c75106ff240cd0ebb353a^sys_idNOT IN55824cf1872c75106ff240cd0ebb3505,5d820cf1872c75106ff240cd0ebb35fc,95824cf1872c75106ff240cd0ebb352d,dc030835872c75106ff240cd0ebb357b,dd824cf1872c75106ff240cd0ebb3520"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>55824cf1872c75106ff240cd0ebb3505</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>beverly.cambel</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:43:45</sys_updated_on>
+        <ui_id>9de60bcb-eb38-4235-b660-685f90128d7a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=55824cf1872c75106ff240cd0ebb3505"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>55824cf1872c75106ff240cd0ebb3505</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>11824cf1872c75106ff240cd0ebb3515</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>55824cf1872c75106ff240cd0ebb3505</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>5d824cf1872c75106ff240cd0ebb3514</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>55824cf1872c75106ff240cd0ebb3505</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>99824cf1872c75106ff240cd0ebb3514</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>55824cf1872c75106ff240cd0ebb3505</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>d1824cf1872c75106ff240cd0ebb3515</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=55824cf1872c75106ff240cd0ebb3505"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>55824cf1872c75106ff240cd0ebb3505</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>9d824cf1872c75106ff240cd0ebb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{7aba4de8-4658-492f-8805-877094031301.Record.mailbox_approver}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>55824cf1872c75106ff240cd0ebb3505</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>91824cf1872c75106ff240cd0ebb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>55824cf1872c75106ff240cd0ebb3505</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>d9824cf1872c75106ff240cd0ebb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>55824cf1872c75106ff240cd0ebb3505</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>55824cf1872c75106ff240cd0ebb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>55824cf1872c75106ff240cd0ebb3505</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>19824cf1872c75106ff240cd0ebb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>55824cf1872c75106ff240cd0ebb3505</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>19824cf1872c75106ff240cd0ebb3514</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=55824cf1872c75106ff240cd0ebb3505"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=55824cf1872c75106ff240cd0ebb3505"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>5d820cf1872c75106ff240cd0ebb35fc</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>beverly.cambel</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:43:45</sys_updated_on>
+        <ui_id>7aba4de8-4658-492f-8805-877094031301</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5d820cf1872c75106ff240cd0ebb35fc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5d820cf1872c75106ff240cd0ebb35fc</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>dd820cf1872c75106ff240cd0ebb35ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>x_snc_shared_mai_0_shared_mailbox</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5d820cf1872c75106ff240cd0ebb35fc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>5d820cf1872c75106ff240cd0ebb35fc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>55820cf1872c75106ff240cd0ebb35ff</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:13:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>mailbox_name={{Created_1.current.shared_mailbox.mailbox_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5d820cf1872c75106ff240cd0ebb35fc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>5d820cf1872c75106ff240cd0ebb35ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5d820cf1872c75106ff240cd0ebb35fc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5d820cf1872c75106ff240cd0ebb35fc"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <order>7</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>95824cf1872c75106ff240cd0ebb352d</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>beverly.cambel</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:43:45</sys_updated_on>
+        <ui_id>103a2468-f5d6-477a-b105-92ae69b9703e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=95824cf1872c75106ff240cd0ebb352d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>95824cf1872c75106ff240cd0ebb352d</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>55824cf1872c75106ff240cd0ebb3530</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>Your Shared Mailbox Permission Request was Rejected</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>95824cf1872c75106ff240cd0ebb352d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>91824cf1872c75106ff240cd0ebb3530</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>95824cf1872c75106ff240cd0ebb352d</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>dd824cf1872c75106ff240cd0ebb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=95824cf1872c75106ff240cd0ebb352d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>95824cf1872c75106ff240cd0ebb352d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>15824cf1872c75106ff240cd0ebb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Greetings,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;You access request to the&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; Mailbox Permission Request Record &amp;gt; Shared Mailbox &amp;gt; Mailbox Name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Mailbox Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_97d503d4-7f42-40ff-b972-08ce97a5c806" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;mailbox has been rejected for the following reason:&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:2f840410-d5f2-4e33-9d3b-bd40e64d5d3b}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:2f840410-d5f2-4e33-9d3b-bd40e64d5d3b}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="2 - Ask For Approval &amp;gt; Action Status &amp;gt; Message"&gt;&lt;span class="pill-start"&gt;2 - Ask For Approval&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Message&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_2f840410-d5f2-4e33-9d3b-bd40e64d5d3b" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>95824cf1872c75106ff240cd0ebb352d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>5d824cf1872c75106ff240cd0ebb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>95824cf1872c75106ff240cd0ebb352d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>51824cf1872c75106ff240cd0ebb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>95824cf1872c75106ff240cd0ebb352d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>d5824cf1872c75106ff240cd0ebb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>95824cf1872c75106ff240cd0ebb352d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>99824cf1872c75106ff240cd0ebb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=95824cf1872c75106ff240cd0ebb352d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=95824cf1872c75106ff240cd0ebb352d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Add User To Group">8395447153e30300eeadddeeff7b12e3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <order>5</order>
+        <parent_ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:30:25</sys_created_on>
+        <sys_id>dc030835872c75106ff240cd0ebb357b</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>beverly.cambel</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:43:45</sys_updated_on>
+        <ui_id>50e6e6a9-e503-4214-8f01-ba8624ecc76d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dc030835872c75106ff240cd0ebb357b"/>
+    <sys_element_mapping action="delete_multiple" query="id=dc030835872c75106ff240cd0ebb357b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_group_name</field>
+        <id>dc030835872c75106ff240cd0ebb357b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:30:25</sys_created_on>
+        <sys_id>10030835872c75106ff240cd0ebb357e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:30:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_8395447153e30300eeadddeeff7b12e3</table>
+        <value>{{7aba4de8-4658-492f-8805-877094031301.Record.ad_user_group}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_user_name</field>
+        <id>dc030835872c75106ff240cd0ebb357b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:30:25</sys_created_on>
+        <sys_id>58030835872c75106ff240cd0ebb357d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:30:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_8395447153e30300eeadddeeff7b12e3</table>
+        <value>{{Created_1.current.opened_by.name}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dc030835872c75106ff240cd0ebb357b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dc030835872c75106ff240cd0ebb357b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <order>4</order>
+        <parent_ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>dd824cf1872c75106ff240cd0ebb3520</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>beverly.cambel</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:43:45</sys_updated_on>
+        <ui_id>eaff9ace-cf07-4fa1-a1e7-f4dc6dee57b0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dd824cf1872c75106ff240cd0ebb3520"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dd824cf1872c75106ff240cd0ebb3520</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>15824cf1872c75106ff240cd0ebb3524</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>Your Shared Mailbox Access Request was Approved</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dd824cf1872c75106ff240cd0ebb3520</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>51824cf1872c75106ff240cd0ebb3524</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dd824cf1872c75106ff240cd0ebb3520</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>9d824cf1872c75106ff240cd0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=dd824cf1872c75106ff240cd0ebb3520"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>dd824cf1872c75106ff240cd0ebb3520</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>d1824cf1872c75106ff240cd0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Greetings,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;You now have access to the&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; Mailbox Permission Request Record &amp;gt; Shared Mailbox &amp;gt; Mailbox Name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Mailbox Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_97d503d4-7f42-40ff-b972-08ce97a5c806" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; mailbox. Please follow these instructions to set it up in Outlook:&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;1)&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;2)&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;3)&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>dd824cf1872c75106ff240cd0ebb3520</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>1d824cf1872c75106ff240cd0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>dd824cf1872c75106ff240cd0ebb3520</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>11824cf1872c75106ff240cd0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>dd824cf1872c75106ff240cd0ebb3520</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>95824cf1872c75106ff240cd0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>dd824cf1872c75106ff240cd0ebb3520</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>59824cf1872c75106ff240cd0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dd824cf1872c75106ff240cd0ebb3520"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dd824cf1872c75106ff240cd0ebb3520"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=700108b1872c75106ff240cd0ebb353a^sys_idNOT IN11824cf1872c75106ff240cd0ebb3525,55824cf1872c75106ff240cd0ebb3516"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">99824cf1872c75106ff240cd0ebb3524</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>11824cf1872c75106ff240cd0ebb3525</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:59</sys_updated_on>
+        <ui_id>86353803-52b6-4d2d-bc8f-301f5b4d8fa7</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=11824cf1872c75106ff240cd0ebb3525"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=11824cf1872c75106ff240cd0ebb3525"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=11824cf1872c75106ff240cd0ebb3525"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">59824cf1872c75106ff240cd0ebb3515</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>55824cf1872c75106ff240cd0ebb3516</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:59</sys_updated_on>
+        <ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=55824cf1872c75106ff240cd0ebb3516"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>55824cf1872c75106ff240cd0ebb3516</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>55824cf1872c75106ff240cd0ebb351a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <value>approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=55824cf1872c75106ff240cd0ebb3516"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>55824cf1872c75106ff240cd0ebb3516</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>d1824cf1872c75106ff240cd0ebb351a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{9de60bcb-eb38-4235-b660-685f90128d7a.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>55824cf1872c75106ff240cd0ebb3516</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>11824cf1872c75106ff240cd0ebb351a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=55824cf1872c75106ff240cd0ebb3516"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=55824cf1872c75106ff240cd0ebb3516"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=700108b1872c75106ff240cd0ebb353a^sys_idNOT IN55824cf1872c75106ff240cd0ebb3533,5d824cf1872c75106ff240cd0ebb3532"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>700108b1872c75106ff240cd0ebb353a</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{9de60bcb-eb38-4235-b660-685f90128d7a.__action_status__.message}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:19</sys_created_on>
+        <sys_id>55824cf1872c75106ff240cd0ebb3533</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:19</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2f840410-d5f2-4e33-9d3b-bd40e64d5d3b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>700108b1872c75106ff240cd0ebb353a</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.shared_mailbox.mailbox_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:19</sys_created_on>
+        <sys_id>5d824cf1872c75106ff240cd0ebb3532</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:19</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>97d503d4-7f42-40ff-b972-08ce97a5c806</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_700108b1872c75106ff240cd0ebb353a^sys_idNOT IN11820cf1872c75106ff240cd0ebb35ee,91820cf1872c75106ff240cd0ebb35f1"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_700108b1872c75106ff240cd0ebb353a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>11820cf1872c75106ff240cd0ebb35ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_700108b1872c75106ff240cd0ebb353a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:18</sys_created_on>
+        <sys_id>91820cf1872c75106ff240cd0ebb35f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_700108b1872c75106ff240cd0ebb353a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_700108b1872c75106ff240cd0ebb353a"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_700108b1872c75106ff240cd0ebb353a"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=700108b1872c75106ff240cd0ebb353a^sys_idNOT IN5492ccf1872c75106ff240cd0ebb35c4"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"5492ccf1872c75106ff240cd0ebb35c4","name":"plan","plan_signature":null}}</plan>
+        <plan_id>700108b1872c75106ff240cd0ebb353a</plan_id>
+        <snapshot>dec39c75876c75106ff240cd0ebb35d3</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5492ccf1872c75106ff240cd0ebb35c4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:13:32</sys_updated_on>
+        <trigger display_value="">d092ccf1872c75106ff240cd0ebb35c2</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=700108b1872c75106ff240cd0ebb353a"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description/>
+        <internal_name>mailbox_access_approval</internal_name>
+        <label_cache>[{"name":"7aba4de8-4658-492f-8805-877094031301.Record.ad_user_group","label":"1➛Shared Mailbox Record➛AD User Group","reference":"","reference_display":"AD User Group","type":"string","base_type":"string","parent_table_name":"x_snc_shared_mai_0_shared_mailbox","column_name":"ad_user_group"},{"name":"Created_1.current.opened_by.name","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Opened by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"9de60bcb-eb38-4235-b660-685f90128d7a.__action_status__.message","label":"2➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"Created_1.current.opened_by.email","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Opened by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"9de60bcb-eb38-4235-b660-685f90128d7a.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7aba4de8-4658-492f-8805-877094031301.Record.mailbox_approver","label":"1➛Shared Mailbox Record➛Mailbox Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_shared_mai_0_shared_mailbox","column_name":"mailbox_approver"},{"name":"Created_1.current.shared_mailbox.mailbox_name","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Shared Mailbox➛Mailbox Name","reference":"","reference_display":"Mailbox Name","type":"string","base_type":"string","parent_table_name":"x_snc_shared_mai_0_shared_mailbox","column_name":"mailbox_name"},{"name":"Created_1.current","label":"Trigger - Record Created➛Mailbox Permission Request Record","reference":"x_snc_shared_mai_0_mailbox_permission_request","reference_display":"Mailbox Permission Request","type":"reference","base_type":"reference","attributes":{}},{"name":"Created_1.current.shared_mailbox","label":"Trigger - Record Created➛Mailbox Permission Request Record➛Shared Mailbox","reference":"x_snc_shared_mai_0_shared_mailbox","reference_display":"Shared Mailbox","type":"reference","base_type":"reference","parent_table_name":"x_snc_shared_mai_0_mailbox_permission_request","column_name":"shared_mailbox"}]</label_cache>
+        <master>true</master>
+        <name>Mailbox Access Approval</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Mailbox Access Approval">700108b1872c75106ff240cd0ebb353a</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2f828cf1872c75106ff240cd0ebb35e4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=2f828cf1872c75106ff240cd0ebb35e4^sys_idNOT INc092ccf1872c75106ff240cd0ebb3577"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>c092ccf1872c75106ff240cd0ebb3577</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:58</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c092ccf1872c75106ff240cd0ebb3577"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>c092ccf1872c75106ff240cd0ebb3577</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>0892ccf1872c75106ff240cd0ebb3578</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>c092ccf1872c75106ff240cd0ebb3577</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>c892ccf1872c75106ff240cd0ebb3578</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=2f828cf1872c75106ff240cd0ebb35e4^sys_idNOT INef828cf1872c75106ff240cd0ebb35e5"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>2f828cf1872c75106ff240cd0ebb35e4</id>
+        <name>Mailbox Access Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>ef828cf1872c75106ff240cd0ebb35e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:28</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ef828cf1872c75106ff240cd0ebb35e5"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=2f828cf1872c75106ff240cd0ebb35e4^sys_idNOT IN67828cf1872c75106ff240cd0ebb35e7,f382ccf1872c75106ff240cd0ebb351f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</model>
+        <model_id>2f828cf1872c75106ff240cd0ebb35e4</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2f828cf1872c75106ff240cd0ebb35e4</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>67828cf1872c75106ff240cd0ebb35e7</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</model>
+        <model_id>2f828cf1872c75106ff240cd0ebb35e4</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2f828cf1872c75106ff240cd0ebb35e4</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>f382ccf1872c75106ff240cd0ebb351f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=2f828cf1872c75106ff240cd0ebb35e4^sys_idNOT IN0092ccf1872c75106ff240cd0ebb3574,7782ccf1872c75106ff240cd0ebb3552,8892ccf1872c75106ff240cd0ebb356a,9d034835872c75106ff240cd0ebb358c,bb82ccf1872c75106ff240cd0ebb353c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <order>7</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>0092ccf1872c75106ff240cd0ebb3574</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <ui_id>103a2468-f5d6-477a-b105-92ae69b9703e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0092ccf1872c75106ff240cd0ebb3574"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0092ccf1872c75106ff240cd0ebb3574</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>0c92ccf1872c75106ff240cd0ebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0092ccf1872c75106ff240cd0ebb3574</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>4892ccf1872c75106ff240cd0ebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0092ccf1872c75106ff240cd0ebb3574</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>cc92ccf1872c75106ff240cd0ebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>Your Shared Mailbox Permission Request was Rejected</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0092ccf1872c75106ff240cd0ebb3574"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>0092ccf1872c75106ff240cd0ebb3574</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>8c92ccf1872c75106ff240cd0ebb3575</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Greetings,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;You access request to the&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; Mailbox Permission Request Record &amp;gt; Shared Mailbox &amp;gt; Mailbox Name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Mailbox Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_97d503d4-7f42-40ff-b972-08ce97a5c806" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;mailbox has been rejected for the following reason:&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:2f840410-d5f2-4e33-9d3b-bd40e64d5d3b}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:2f840410-d5f2-4e33-9d3b-bd40e64d5d3b}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="2 - Ask For Approval &amp;gt; Action Status &amp;gt; Message"&gt;&lt;span class="pill-start"&gt;2 - Ask For Approval&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Message&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_2f840410-d5f2-4e33-9d3b-bd40e64d5d3b" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>0092ccf1872c75106ff240cd0ebb3574</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>c492ccf1872c75106ff240cd0ebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>0092ccf1872c75106ff240cd0ebb3574</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>c892ccf1872c75106ff240cd0ebb3575</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>0092ccf1872c75106ff240cd0ebb3574</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>4092ccf1872c75106ff240cd0ebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>0092ccf1872c75106ff240cd0ebb3574</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>0492ccf1872c75106ff240cd0ebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0092ccf1872c75106ff240cd0ebb3574"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0092ccf1872c75106ff240cd0ebb3574"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>7782ccf1872c75106ff240cd0ebb3552</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <ui_id>9de60bcb-eb38-4235-b660-685f90128d7a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7782ccf1872c75106ff240cd0ebb3552"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7782ccf1872c75106ff240cd0ebb3552</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>3382ccf1872c75106ff240cd0ebb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7782ccf1872c75106ff240cd0ebb3552</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>7f82ccf1872c75106ff240cd0ebb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7782ccf1872c75106ff240cd0ebb3552</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>b782ccf1872c75106ff240cd0ebb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7782ccf1872c75106ff240cd0ebb3552</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>f382ccf1872c75106ff240cd0ebb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7782ccf1872c75106ff240cd0ebb3552"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>7782ccf1872c75106ff240cd0ebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>3b82ccf1872c75106ff240cd0ebb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{7aba4de8-4658-492f-8805-877094031301.Record.mailbox_approver}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>7782ccf1872c75106ff240cd0ebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>3f82ccf1872c75106ff240cd0ebb3553</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>7782ccf1872c75106ff240cd0ebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>7782ccf1872c75106ff240cd0ebb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>7782ccf1872c75106ff240cd0ebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>ff82ccf1872c75106ff240cd0ebb3553</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>7782ccf1872c75106ff240cd0ebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>b382ccf1872c75106ff240cd0ebb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>7782ccf1872c75106ff240cd0ebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>fb82ccf1872c75106ff240cd0ebb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7782ccf1872c75106ff240cd0ebb3552"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7782ccf1872c75106ff240cd0ebb3552"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <order>4</order>
+        <parent_ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>8892ccf1872c75106ff240cd0ebb356a</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <ui_id>eaff9ace-cf07-4fa1-a1e7-f4dc6dee57b0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8892ccf1872c75106ff240cd0ebb356a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8892ccf1872c75106ff240cd0ebb356a</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>4892ccf1872c75106ff240cd0ebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>Your Shared Mailbox Access Request was Approved</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8892ccf1872c75106ff240cd0ebb356a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>8492ccf1872c75106ff240cd0ebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>x_snc_shared_mai_0_mailbox_permission_request</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8892ccf1872c75106ff240cd0ebb356a</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>c092ccf1872c75106ff240cd0ebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8892ccf1872c75106ff240cd0ebb356a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>8892ccf1872c75106ff240cd0ebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>0892ccf1872c75106ff240cd0ebb356c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Greetings,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;You now have access to the&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:97d503d4-7f42-40ff-b972-08ce97a5c806}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Record Created &amp;gt; Mailbox Permission Request Record &amp;gt; Shared Mailbox &amp;gt; Mailbox Name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Mailbox Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_97d503d4-7f42-40ff-b972-08ce97a5c806" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; mailbox. Please follow these instructions to set it up in Outlook:&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;1)&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;2)&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;3)&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>8892ccf1872c75106ff240cd0ebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>4092ccf1872c75106ff240cd0ebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>8892ccf1872c75106ff240cd0ebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>4492ccf1872c75106ff240cd0ebb356c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>8892ccf1872c75106ff240cd0ebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>c892ccf1872c75106ff240cd0ebb356c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>8892ccf1872c75106ff240cd0ebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>8c92ccf1872c75106ff240cd0ebb356c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8892ccf1872c75106ff240cd0ebb356a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8892ccf1872c75106ff240cd0ebb356a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Add User To Group">8395447153e30300eeadddeeff7b12e3</action_type>
+        <action_type_parent display_value="Add User To Group">dc65807153e30300eeadddeeff7b124b</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <order>5</order>
+        <parent_ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:30:29</sys_created_on>
+        <sys_id>9d034835872c75106ff240cd0ebb358c</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <ui_id>50e6e6a9-e503-4214-8f01-ba8624ecc76d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9d034835872c75106ff240cd0ebb358c"/>
+    <sys_element_mapping action="delete_multiple" query="id=9d034835872c75106ff240cd0ebb358c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_group_name</field>
+        <id>9d034835872c75106ff240cd0ebb358c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:30:29</sys_created_on>
+        <sys_id>11034835872c75106ff240cd0ebb358e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:30:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_8395447153e30300eeadddeeff7b12e3</table>
+        <value>{{7aba4de8-4658-492f-8805-877094031301.Record.ad_user_group}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_user_name</field>
+        <id>9d034835872c75106ff240cd0ebb358c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:30:29</sys_created_on>
+        <sys_id>5d034835872c75106ff240cd0ebb358d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:30:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_8395447153e30300eeadddeeff7b12e3</table>
+        <value>{{Created_1.current.opened_by.name}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9d034835872c75106ff240cd0ebb358c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9d034835872c75106ff240cd0ebb358c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>bb82ccf1872c75106ff240cd0ebb353c</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <ui_id>7aba4de8-4658-492f-8805-877094031301</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=bb82ccf1872c75106ff240cd0ebb353c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>bb82ccf1872c75106ff240cd0ebb353c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>b782ccf1872c75106ff240cd0ebb353e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <value>x_snc_shared_mai_0_shared_mailbox</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=bb82ccf1872c75106ff240cd0ebb353c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>bb82ccf1872c75106ff240cd0ebb353c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>7382ccf1872c75106ff240cd0ebb353e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:13:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>mailbox_name={{Created_1.current.shared_mailbox.mailbox_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>bb82ccf1872c75106ff240cd0ebb353c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>3782ccf1872c75106ff240cd0ebb353e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=bb82ccf1872c75106ff240cd0ebb353c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=bb82ccf1872c75106ff240cd0ebb353c"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=2f828cf1872c75106ff240cd0ebb35e4^sys_idNOT IN7b82ccf1872c75106ff240cd0ebb352a,7f82ccf1872c75106ff240cd0ebb3530"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">59824cf1872c75106ff240cd0ebb3515</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>7b82ccf1872c75106ff240cd0ebb352a</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=7b82ccf1872c75106ff240cd0ebb352a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>7b82ccf1872c75106ff240cd0ebb352a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>b382ccf1872c75106ff240cd0ebb3530</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:28</sys_updated_on>
+        <value>approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7b82ccf1872c75106ff240cd0ebb352a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>7b82ccf1872c75106ff240cd0ebb352a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>3382ccf1872c75106ff240cd0ebb3530</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:28</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{9de60bcb-eb38-4235-b660-685f90128d7a.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>7b82ccf1872c75106ff240cd0ebb352a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>7f82ccf1872c75106ff240cd0ebb352f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:28</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=7b82ccf1872c75106ff240cd0ebb352a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7b82ccf1872c75106ff240cd0ebb352a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">99824cf1872c75106ff240cd0ebb3524</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mailbox Access Approval">2f828cf1872c75106ff240cd0ebb35e4</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>852d1c44-516a-4a1d-a843-650b1fb0961e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>7f82ccf1872c75106ff240cd0ebb3530</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 16:18:56</sys_updated_on>
+        <ui_id>86353803-52b6-4d2d-bc8f-301f5b4d8fa7</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=7f82ccf1872c75106ff240cd0ebb3530"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=7f82ccf1872c75106ff240cd0ebb3530"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7f82ccf1872c75106ff240cd0ebb3530"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2f828cf1872c75106ff240cd0ebb35e4^sys_idNOT IN0092ccf1872c75106ff240cd0ebb3579,8c92ccf1872c75106ff240cd0ebb3578"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2f828cf1872c75106ff240cd0ebb35e4</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{9de60bcb-eb38-4235-b660-685f90128d7a.__action_status__.message}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>0092ccf1872c75106ff240cd0ebb3579</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2f840410-d5f2-4e33-9d3b-bd40e64d5d3b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2f828cf1872c75106ff240cd0ebb35e4</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.shared_mailbox.mailbox_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:29</sys_created_on>
+        <sys_id>8c92ccf1872c75106ff240cd0ebb3578</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:29</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>97d503d4-7f42-40ff-b972-08ce97a5c806</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_2f828cf1872c75106ff240cd0ebb35e4^sys_idNOT IN3f82ccf1872c75106ff240cd0ebb3523,fb82ccf1872c75106ff240cd0ebb351b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2f828cf1872c75106ff240cd0ebb35e4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>3f82ccf1872c75106ff240cd0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2f828cf1872c75106ff240cd0ebb35e4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:28:28</sys_created_on>
+        <sys_id>fb82ccf1872c75106ff240cd0ebb351b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:28:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2f828cf1872c75106ff240cd0ebb35e4"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>700108b1872c75106ff240cd0ebb353a</sys_id>
+        <latest_snapshot>2f828cf1872c75106ff240cd0ebb35e4</latest_snapshot>
+        <compiler_build>glide-utah-12-21-2022__patch4-hotfix2a-06-27-2023_07-11-2023_1218.zip</compiler_build>
+    </sys_hub_flow>
+</record_update>

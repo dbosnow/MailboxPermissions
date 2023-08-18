@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="Shared Mailbox Permissions Management Config">b9b5ccf5642c75108bb33abf87a81c58</app_config>
+        <description/>
+        <event_mappings/>
+        <macroponent display_value="Workspace notification">2683731bb7fa5010fddc6c91de11a93c</macroponent>
+        <macroponent_config/>
+        <name>Notification tray default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Notification tray">79b5ccf54a2c751030856c7d293c0e4d</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:42:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f1b58cf5af2c751083d8a5fa706ab4ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notification tray default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name>sys_ux_screen_f1b58cf5af2c751083d8a5fa706ab4ec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:42:17</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=f1b58cf5af2c751083d8a5fa706ab4ec"/>
+</record_update>

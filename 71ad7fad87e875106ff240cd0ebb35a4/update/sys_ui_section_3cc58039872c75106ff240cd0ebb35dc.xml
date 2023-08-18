@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="3cc58039872c75106ff240cd0ebb35dc" sys_domain="global" table="x_snc_shared_mai_0_mailbox_permission_request" version="3" view="workspace-shared-mailbox-permissions-management-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>753578b187ec75106ff240cd0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>shared_mailbox</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>793578b187ec75106ff240cd0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>7d3578b187ec75106ff240cd0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>opened_at</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>713578b187ec75106ff240cd0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>opened_by</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>393578b187ec75106ff240cd0ebb3590</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>3d3578b187ec75106ff240cd0ebb3590</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>justification</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>313578b187ec75106ff240cd0ebb3591</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comments</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 19:09:48</sys_created_on>
+            <sys_id>353578b187ec75106ff240cd0ebb3591</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_shared_mai_0_mailbox_permission_request" sys_domain="global" view="fdb5ccf5132c75105cd65c4e1a52f14d">3cc58039872c75106ff240cd0ebb35dc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 19:09:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_shared_mai_0_mailbox_permission_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-09 15:42:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3cc58039872c75106ff240cd0ebb35dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_shared_mai_0_mailbox_permission_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+            <sys_update_name>sys_ui_section_3cc58039872c75106ff240cd0ebb35dc</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-09 15:42:28</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Workspace Shared Mailbox Permissions Management 0" name="workspace-shared-mailbox-permissions-management-0">fdb5ccf5132c75105cd65c4e1a52f14d</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="Shared Mailbox Permissions Management">39b5ccf5282c7510eb9194e99f963a50</dashboard>
+        <group/>
+        <role display_value="x_snc_shared_mai_0.admin" name="x_snc_shared_mai_0.admin">35ad7fad87e875106ff240cd0ebb35cf</role>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:42:21</sys_created_on>
+        <sys_id>c3b50039872c75106ff240cd0ebb3596</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>39b5ccf5282c7510eb9194e99f963a50</sys_name>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name>par_dashboard_permission_c3b50039872c75106ff240cd0ebb3596</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 15:42:21</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+</record_update>

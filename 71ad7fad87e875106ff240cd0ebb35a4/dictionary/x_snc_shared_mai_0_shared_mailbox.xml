@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="978e3fed87e875106ff240cd0ebb3585" label="Shared Mailbox" max_length="40" name="x_snc_shared_mai_0_shared_mailbox" text_index="true" type="collection">
+        <element label="AD User Group" max_length="40" name="ad_user_group" type="string"/>
+        <element label="Mailbox Approver" max_length="32" name="mailbox_approver" reference="sys_user" type="reference"/>
+        <element display="true" label="Mailbox Name" max_length="40" name="mailbox_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="mailbox_approver"/>
+        </index>
+    </element>
+</database>

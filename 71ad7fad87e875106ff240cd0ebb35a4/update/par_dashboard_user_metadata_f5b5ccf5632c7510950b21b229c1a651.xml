@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="par_dashboard_user_metadata">
+    <par_dashboard_user_metadata action="INSERT_OR_UPDATE">
+        <created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user>
+        <created_on>2022-05-29 16:29:20</created_on>
+        <dashboard display_value="Shared Mailbox Permissions Management">39b5ccf5282c7510eb9194e99f963a50</dashboard>
+        <last_updated_on>2023-08-09 17:27:16</last_updated_on>
+        <requested_by_user/>
+        <sys_class_name>par_dashboard_user_metadata</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-09 15:42:17</sys_created_on>
+        <sys_id>f5b5ccf5632c7510950b21b229c1a651</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Shared Mailbox Permissions Management" source="x_snc_shared_mai_0">71ad7fad87e875106ff240cd0ebb35a4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Shared Mailbox Permissions Management">71ad7fad87e875106ff240cd0ebb35a4</sys_scope>
+        <sys_update_name>par_dashboard_user_metadata_f5b5ccf5632c7510950b21b229c1a651</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-09 17:27:16</sys_updated_on>
+        <updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user>
+    </par_dashboard_user_metadata>
+</record_update>

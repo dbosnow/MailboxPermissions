@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9d5eb7ed87e875106ff240cd0ebb35e5" extends="task" label="Mailbox Permission Request" max_length="40" name="x_snc_shared_mai_0_mailbox_permission_request" text_index="true" type="collection">
+        <element label="Justification" max_length="200" name="justification" type="string"/>
+        <element label="Shared Mailbox" max_length="32" name="shared_mailbox" reference="x_snc_shared_mai_0_shared_mailbox" type="reference"/>
+    </element>
+</database>
